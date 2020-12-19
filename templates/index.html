@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Audio Book</title>
+    <style type="text/css">
+                  * {
+                      box-sizing: border-box;
+                    }
+                    html,
+                    body {
+                      min-height: 100vh;
+                      margin: 0;
+                      padding: 0;
+                    }
+                    body {
+                      font-family: Helvetica, Arial, sans-serif;
+                      color: #021b95;
+                      display: flex;
+                      flex-direction: column;
+                      padding-left: 0.5em;
+                      padding-right: 0.5em;
+                    }
+                    h1 {
+                      text-align: center;
+                    }
+                    header {
+                      border-bottom: 1px solid #0d122b;
+                      margin-bottom: 0.5em;
+                    }
+                    main {
+                      flex-grow: 2;
+                      display: flex;
+                      justify-content: space-around;
+                      align-items: center;
+                      background-color: #fff;
+                      border-radius: 12px;
+                      margin-bottom: 1em;
+                    }
+                    @keyframes bg-pulse {
+                      0% {
+                        background-color: #fff;
+                      }
+
+                      50% {
+                        background-color: #c7ecee;
+                      }
+
+                      100% {
+                        backgrouond-color: #fff;
+                      }
+                    }
+                    main.speaking {
+                      animation: bg-pulse 1.5s alternate ease-in-out infinite;
+                    }
+                    .input {
+                      text-align: center;
+                      width: 100%;
+                    }
+                    label {
+                      display: block;
+                      font-size: 14px;
+                      margin-bottom: 0.3em;
+                    }
+                    .field {
+                      margin-bottom: 2em;
+
+                    }
+                    .field2 {
+                      margin-bottom: 2em;
+                      width: 12%
+                      font-size: 18px;
+                      padding: 0.2em;
+                      border-radius: 4px;
+                      width: 5%;
+                      display: inline-block;
+                      text-align: center;
+                    }
+
+                    input {
+                      font-size: 18px;
+                      padding: 0.2em;
+                      border: 1px solid rgba(13, 18, 43, 0.25);
+                      border-radius: 6px;
+                      width: 50%;
+                      display: inline-block;
+                      transition: border-color 0.25s;
+                      text-align: left;
+                    }
+                    input:focus,
+                    select:focus {
+                      border-color: rgba(13, 18, 43, 1);
+                    }
+                    select {
+                      width: 12%;
+                      font-size: 14px;
+                      padding: 0.5em;
+                      border: 1px solid rgba(13, 18, 43, 0.25);
+                      border-radius: 36px;
+                      transition: border-color 0.25s;
+                    }
+                    button {
+                      font-size: 20px;
+                      font-weight: 200;
+                      width: 138px;
+                      background: transparent;
+                      border: 2px solid #f70000;
+                      border-radius: 34px;
+                      transition: all 0.4s ease 0s;
+                      cursor: pointer;
+                      color: #f70000;
+                      margin-bottom: 2em;
+                    }
+                    button:hover,
+                    button:focus {
+                      background: rgb(13 18 43 / 0%);
+                      color: #2fd024;
+                      border: 2px solid #2fd024;
+                    }
+
+                    .error {
+                      color: #f22f46;
+                      text-align: center;
+                    }
+                    footer {
+                      border-top: 1px solid #0d122b;
+                      text-align: center;
+                    }
+
+    </style>
+
+
+
+  </head>
+      <body>
+
+          <header>
+              <h1>Audio Book</h1>
+          </header>
+
+        <main>
+          <form class="input" id="voice-form" method="post">
+                <div class="field">
+                    <input type="text" name="speech" id="speech" placeholder="Enter or Paste PDF file path with extension Ex:- (D:\filename.pdf)" required />
+                </div>
+                <label for="pgnum">From which page you want to start listning the text? </label>
+                    <label for="pgnum">Enter Starting Page Number (Default 1)</label>
+                <div class="field2">
+                    <input type="text" name="pgnum" id="pgnum"  />
+                </div>
+              <label for="end_pgnum">Enter End Page Number (Default End of the page)</label>
+                <div class="field2">
+                    <input type="text" name="end_pgnum" id="end_pgnum" />
+                </div>
+
+                <div class="field">
+                    <label for="voices">Choose a Voice Assistant</label>
+                      <select name="voices" id="voices">
+                          <option value="Male">Male</option>
+                          <option value="Female">Female</option>
+                      </select>
+                </div>
+              <button>
+                    Listen Text...
+              </button>
+
+          </form>
+        </main>
+
+        <footer>
+            <p>
+                AudioBook API By: Krishn Kant Raj and Intekhab Ahmad of CSE, 2k17, Motihari College of Engineering
+            </p>
+        </footer>
+      </body>
+</html>
