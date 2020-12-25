@@ -12,18 +12,27 @@ I have used the same code but customize it to read the text of given PDF file pa
 
 If you wanna change anything in this, write in comment section or clone it and do some fun on it.
 
- ## What you have to do after cloning it in your system? 
+## How to Download?
+Using Git Bash Terminal, copy the below code and paste it in your git terminal.
+```
+git clone git@github.com:krishn-kant-raj/Audio-Book.git
+```
+
+## What you have to do after cloning/Downloading it in your system? 
 
 1. Open the downloaded directory (AudioBook) in PyCharm
 2. Run the app.py and after some second you will get a link like this http://127.0.0.1:8000/
-3. Enter page number (Starting and End, both are optional)
-4. Click on the link and then Enter the PDF file path and select the voice (Male/Female)
-5. Click on (Listen Text...) button and here you go.
+3. Click on the link and then enter or paste file path with .pdf extension
+4. Enter page number (Starting and End, both are optional)
+5. Select the voice Male or Female (It's optional and default is 'Male' voice) 
+6. Select Speech Rate as Normal, Very Slow, Slow, Fast or Very Fast (It's optional and default is 'Normal' speech rate)
+7. Finally, click on (Listen Text...) button and here you go.
 
 # Issues
 We are working to solve issue for page number. For simple pdf it works fine but have some issues in pdf contain images or tabular form.
 ***
 Thanks!
+
 Team Paradox
 
 > Project Members:
