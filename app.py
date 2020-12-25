@@ -13,6 +13,7 @@ def homepage():
         fname = request.form['speech']
         gender = request.form['voices']
         s_pgnum = request.form['pgnum']
+        v_rate = request.form['voice_rate']
         if s_pgnum == '':
             s_pgnum = 0
         else:
@@ -24,11 +25,13 @@ def homepage():
             e_pgnum = 1
         else:
             pass
+        if v_rate == '':
+            v_rate = 'Normal'
 
         e_pgnum = int(e_pgnum)
         text = read_text_from_pdf(fname, s_pgnum, e_pgnum)
         print(text)
-        text_to_speech(text, gender)
+        text_to_speech(text, gender,v_rate)
         return render_template('index.html')
     else:
         return render_template('index.html')
