@@ -87,6 +87,7 @@
                       display: inline-block;
                       transition: border-color 0.25s;
                       text-align: left;
+                      margin-top: 10px;
                     }
                     input:focus,
                     select:focus {
@@ -130,7 +131,17 @@
 
     </style>
 
-
+<script>
+    function toggle() {
+        var hide = document.getElementById('hide');
+        if (hide.style.display == 'block') {
+            hide.style.display = 'none';
+        }
+        else {
+            hide.style.display = 'block';
+        }
+    }
+</script>
   </head>
       <body>
 
@@ -140,20 +151,28 @@
 
         <main>
           <form class="input" id="voice-form" method="post">
+              <div class="field">
+                    <label for="choice">Choose file type (Default: PDF)</label>
+                      <select name="choice" id="choice" onchange="toggle()">
+                          <option value="PDF File">PDF File</option>
+                          <option value="Image">Image</option>
+                      </select>
                 <div class="field">
-                    <input type="text" name="speech" id="speech" placeholder="Enter or Paste PDF file path with .PDF extension Example:- (D:\filename.pdf)" required />
+                    <input type="text" name="speech" id="speech" placeholder="Enter or Paste file path with proper extension (.pdf/.jpg/.png)" required />
                 </div>
-                    <label for="pgnum">Enter Starting Page Number (Default 1)</label>
+              <div id="hide" style="display:block; padding:10px;">
+                    <label for="pgnum">Enter Starting Page Number (Default: 1)</label>
                 <div class="field2">
                     <input type="text" name="pgnum" id="pgnum" placeholder="1"  />
                 </div>
-              <label for="end_pgnum">Enter End Page Number (Default End of the page)</label>
+              <label for="end_pgnum">Enter End Page Number (Default: End of the page)</label>
                 <div class="field2">
                     <input type="text" name="end_pgnum" id="end_pgnum" />
                 </div>
+              </div>
 
                 <div class="field">
-                    <label for="voices">Choose a Voice Assistant</label>
+                    <label for="voices">Choose a Voice Assistant (Default: Male)</label>
                       <select name="voices" id="voices">
                           <option value="Male">Male</option>
                           <option value="Female">Female</option>
