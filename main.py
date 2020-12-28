@@ -1,5 +1,14 @@
 import pyttsx3
 import PyPDF2
+import pytesseract as tess
+tess.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
+import cv2
+
+def image_to_text_reader(img_path):
+    img = cv2.imread(img_path)
+    text = tess.image_to_string(img)
+    print(text)
+    return text
 
 def text_to_speech(text, gender, v_rate):
     """
@@ -54,15 +63,29 @@ def read_text_from_pdf(fname,s_pgnum, e_pgnum):
 
         return text
 
-    except FileNotFoundError:
-        return 'enter or past your pdf file path with extension of .PDF'
+    except (FileNotFoundError,PyPDF2.utils.PdfReadError,TypeError):
+        return 'enter or past your file path with proper extension'
+    finally:
+        return 'enter or past your file path with proper extension'
 
 s_pgnum = 0
 e_pgnum = 1
 fname = ""
+img_path = ''
 try:
     text = read_text_from_pdf(fname,s_pgnum,e_pgnum)
 except FileNotFoundError:
     text=' '
+except PyPDF2.utils.PdfReadError:
+    text = 'This is not a PDF file.'
 
 text_to_speech(text, gender='Male', v_rate='Normal')
+
+try:
+    text = image_to_text_reader(img_path)
+except FileNotFoundError:
+    text = ' '
+except TypeError:
+    text = ' '
+finally:
+    pass
