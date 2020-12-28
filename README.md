@@ -1,7 +1,7 @@
 # Audio-Book
-This project will be helpful in reading the pdfs/iamge of anything as per the users interest.
+This project will be helpful in reading the pdfs/image of anything as per the users interest.
 
-It's very simple to use and impliment using Flask and Python. If you should have basic knowledge of Flask and Python you can understand the code and costomize it by own.
+It's very simple to use and implement using Flask and Python. If you should have basic knowledge of Flask and Python you can understand the code and customize it by own.
 We searched alot for this type of API but got nothing. Then we decided to work on it and finally we have done it.
 Now you can give the path of an image and hear the text on it. (Only English Text)
 
@@ -19,8 +19,10 @@ If you wanna change anything in this, write in comment section or clone it and d
 - pyttsx3
 - PyPDF2
 - CV2
-- pytesseract (Tesseract to perform OCR (optical character recognition). Download 32bit or 64 bit as per the requirement to your system.)[More Details](https://github.com/UB-Mannheim/tesseract/wiki) [Tesseract User Manual](https://tesseract-ocr.github.io/tessdoc/Home.html)
-[Tesseract Repo on GitHub](https://github.com/tesseract-ocr/tesseract)
+- pytesseract (Tesseract to perform OCR (optical character recognition). 
+
+Download 32bit or 64 bit as per the requirement to your system.) [More Details](https://github.com/UB-Mannheim/tesseract/wiki) [Tesseract User Manual](https://tesseract-ocr.github.io/tessdoc/Home.html)
+ [Tesseract Repo on GitHub](https://github.com/tesseract-ocr/tesseract)
 
 ***
 The latest installers (v5.0.0) can be downloaded here:
@@ -49,7 +51,7 @@ Command to Install PyPDF2[More...](https://pypi.org/project/PyPDF2/)
 ```
 pip install PyPDF2
 ```
-Command to Install CV2 [More...](https://pypi.org/project/opencv-python/) [Reference 2](https://stackoverflow.com/questions/57883178/how-to-install-cv2)
+Command to Install CV2 [More... ](https://pypi.org/project/opencv-python/) |  [  StackOverFlow](https://stackoverflow.com/questions/57883178/how-to-install-cv2)
 ```
 pip install opencv-python
 ```
