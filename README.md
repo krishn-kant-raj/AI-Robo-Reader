@@ -35,29 +35,42 @@ The latest installers (v5.0.0) can be downloaded here:
 ## How to install the modules?
 > Open the cmd terminal and copy-paste the commmand or in PyCharm Create a Project and open the Terminal paste the commands for each modules. [More...](https://www.jetbrains.com/help/pycharm/installing-uninstalling-and-upgrading-packages.html)
 
-Command to Install Flask [More..](https://pypi.org/project/Flask/)
+You can also create a Python virtual enviroment and install all the dependencies using below command.
+Make sure you are installing in current project directory.
+
 ```
-pip install Flask
+pip install virtualenv
+virtualenv env_name
+.\env_name\activate
+pip install -r requirements.txt
+```
+For more detail on Python virtual enviroment and installing requirements.txt file you can [Watch this Video](https://www.codewithharry.com/videos/python-tutorials-for-absolute-beginners-43)
+
+If you are getting any ``` Error ``` while installing requirements.txt install manually through pip commands given below. 
+
+Command to Install Flask [More...](https://pypi.org/project/Flask/)
+```
+pip install Flask==1.1.2
 ```
 Command to Install Flask-Cors [More...](https://pypi.org/project/Flask-Cors/)
 ```
-pip install Flask-Cors
+pip install Flask-Cors==3.0.9
 ```
 Command to Install Python Text to Speech [More...](https://pypi.org/project/pyttsx3/)
 ```
-pip install pyttsx3
+pip install pyttsx3==2.90
 ```
 Command to Install PyPDF2[More...](https://pypi.org/project/PyPDF2/)
 ```
-pip install PyPDF2
+pip install PyPDF2==1.26.0
 ```
 Command to Install CV2 [More... ](https://pypi.org/project/opencv-python/) |  [  StackOverFlow](https://stackoverflow.com/questions/57883178/how-to-install-cv2)
 ```
-pip install opencv-python
+pip install opencv-python==4.5.1.48
 ```
 Command to Install pytesseract [More...](https://pypi.org/project/pytesseract/)
 ```
-pip install pytesseract
+pip install pytesseract==0.3.7
 ```
 ***
 ## Language Used
