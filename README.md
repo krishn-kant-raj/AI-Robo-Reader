@@ -1,4 +1,4 @@
-# Audio-Book
+# Welcome to AI Robo Reader
 This project will be helpful in reading the pdfs/image of anything as per the users interest.
 
 It's very simple to use and implement using Flask and Python. If you should have basic knowledge of Flask and Python you can understand the code and customize it by own.
@@ -100,6 +100,13 @@ git clone git@github.com:krishn-kant-raj/Audio-Book.git
 We are working to solve issue for page number. For simple pdf it works fine but have some issues in pdf contain images or contents in tabular form.
 
 If any image contains other than English alpabets, this API will not read that words correctly. 
+***
+# To Do list
+- [ ] Dockerize the API
+- [x] Read Image Text
+- [x] Read PDF text
+- [x] Hide Page section while selecting Image option
+- [x] Error Handling
 ***
 Thanks!
 
