@@ -1,7 +1,7 @@
 # Importing the necessary Libraries
 from flask_cors import cross_origin
 from flask import Flask, render_template, request
-from main import text_to_speech, read_text_from_pdf,image_to_text_reader
+from main import text_to_speech, read_text_from_pdf, image_to_text_reader
 
 app = Flask(__name__)
 
@@ -14,6 +14,7 @@ def homepage():
         fname = request.form['speech']
         gender = request.form['voices']
         s_pgnum = request.form['pgnum']
+        e_pgnum = request.form['end_pgnum']
         v_rate = request.form['voice_rate']
         if choice == 'Image':
             try:
@@ -28,8 +29,6 @@ def homepage():
             else:
                 s_pgnum = int(s_pgnum)
 
-            e_pgnum = request.form['end_pgnum']
-
             if e_pgnum == '':
                 e_pgnum = 1
             else:
@@ -41,7 +40,7 @@ def homepage():
 
             text = read_text_from_pdf(fname, s_pgnum, e_pgnum)
             print(text)
-            text_to_speech(text, gender,v_rate)
+            text_to_speech(text, gender, v_rate)
             return render_template('index.html')
 
     else:
