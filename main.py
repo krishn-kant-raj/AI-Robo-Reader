@@ -78,7 +78,7 @@ def read_text_from_pdf(fname,s_pgnum, e_pgnum):
 
         return text
 
-    except (FileNotFoundError,PyPDF2.utils.PdfReadError,TypeError):
+    except (FileNotFoundError,PyPDF2.utils.PdfReadError,TypeError, OSError):
         return 'enter or past your file path with proper extension'
 
 s_pgnum = 0
@@ -87,7 +87,7 @@ fname = ""
 img_path = ''
 try:
     text = read_text_from_pdf(fname, s_pgnum, e_pgnum)
-except FileNotFoundError:
+except (FileNotFoundError, OSError):
     text = ' '
 except PyPDF2.utils.PdfReadError:
     text = 'This is not a PDF file.'
