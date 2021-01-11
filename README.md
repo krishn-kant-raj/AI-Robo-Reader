@@ -106,9 +106,12 @@ git clone git@github.com:krishn-kant-raj/AI-Robo-Reader.git
 We are working to solve issue for page number. For simple pdf it works fine but have some issues in pdf contain images or contents in tabular form.
 
 If any image contains other than English alpabets, this API will not read that words correctly. 
+
+``` OSError ``` Fixed with commit ID [#d783d](https://github.com/krishn-kant-raj/AI-Robo-Reader/commit/d783d204fc6017cb03b8ceac6eccad145ccb4c56). You can only hear the PDF or Image text present in local machine not on web.
 ***
 # To Do list
 - [ ] Dockerize the API
+- [x] OSError fixed [#d783d](https://github.com/krishn-kant-raj/AI-Robo-Reader/commit/d783d204fc6017cb03b8ceac6eccad145ccb4c56)
 - [x] Read Image Text
 - [x] Read PDF text
 - [x] Hide Page section while selecting Image option
